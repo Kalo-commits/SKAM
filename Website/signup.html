@@ -1,0 +1,89 @@
+<DOCTYPE html>
+    <html lang="en"> 
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          <!-- jQuery library -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+          <!-- Popper JS -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        
+          <!-- Latest compiled JavaScript -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="password_match.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Tab -->
+        <link rel="icon" href="icon.ico" sizes="16x16">
+        <title>Sprinkly</title>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="signup.html">
+                                <img src="icon.ico" width="30" height="30"> Sprinkly
+                            </a>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="main.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                          </li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+    
+        <form action="/action_page.php">
+            <div class="container">
+                <h2>Sign up</h2>
+                <p>Please fill in this form to create an account.</p>
+    
+                <hr>
+                
+                <form class="row g-3" action="save-to-log.php" method="POST">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" onkeyup='check();'required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pwd" class="col-form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirm_password" id="confirm_password" onkeyup='check();'required>
+                        <span id='message' class="form-text" disabled></span>
+                    </div>
+    
+                    <hr>
+    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn zelenb" id="register" href="main.html">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container signin">
+                <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+            </div>
+        </form>
+    </body>
+    </html>
+    
