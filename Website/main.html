@@ -24,30 +24,49 @@
 	<script src="password_match.js"></script>
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Hacktues</title>
+	<!-- Tab -->
+	<link rel="icon" href="icon.ico" sizes="16x16">
+	<title>Sprinkly</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 		  	<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
-			  		<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="register.html">Home</a>
+					<li class="nav-item">
+						<a class="nav-link" href="signup.html">
+							<img src="icon.ico" width="30" height="30"> Sprinkly
+						</a>
 			  		</li>
                     <li class="nav-item">
-					    <a class="nav-link" href="main.html">Main</a>
+					    <a class="nav-link active" aria-current="page" href="main.html">Home</a>
 			  		</li>
 			  		<li class="nav-item">
 						<a class="nav-link" href="about.html">About</a>
-			  		</li>
-			  		<li class="nav-item">
-						<a class="nav-link" href="page2.html">drugo neshto</a>
 			  		</li>
 				</ul>
 		  	</div>
 		</div>
 	</nav>
-    <div class="container">
-        <h1>Main</h1>
+    <div class="container mt-3">
+        <h2>The XMLHttpRequest Object</h2>
+		<div class="d-grid pt-2 p-1 col-4"><button type="button" class="btn zelenb" onclick="loadDoc()">Request data</button></div>
+		
+		
+		<p id="demo"></p>
+		
+		
+		<script>
+		function loadDoc() {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  document.getElementById("demo").innerHTML = this.responseText;
+			}
+		  };
+		  xhttp.open("GET", "demo_get.asp", true);
+		  xhttp.send();
+		}
+		</script>
     </div>
 </body>
