@@ -3,7 +3,10 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
+app.listen(port, '0.0.0.0', function() { 
 
+  console.log('Listening to port:  ' + port);
+});
 
 app.get('/register.html', (req, res) => {
     res.sendFile('./register.html', { root: __dirname });
@@ -28,7 +31,7 @@ app.get('/about.html', (req, res) => {
 app.get('/password_match.js', (req, res) => {
   res.sendFile('./password_match.js', { root: __dirname });
 });
-app.listen(port, () => console.log(`listening on port ${port}!`))
+//app.listen(port, () => console.log(`listening on port ${port}!`))
 
 let mysql = require('mysql');
 
@@ -43,7 +46,7 @@ connection.connect(function(err) {
   if (err)throw err;
   console.log("Connected!");
   
-  var sql = "INSERT INTO users (ID, EmailAddress, PasswordSalt,PasswordHash) VALUES ('1','netflix@baruh.net','MOKQ','')";
+  var sql = "INSERT INTO users (ID, EmailAddress, PasswordSalt,PasswordHash) VALUES ('','','','')";
   connection.query(sql, function (err, result) {
     if (err)throw err ;
     console.log("1 record inserted");
