@@ -1,0 +1,22 @@
+CREATE TABLE `Users` (
+    `ID` integer not null primary key,
+    `EmailAddress` VARCHAR(100) not null,
+    `FirstName` VARCHAR(50),
+    `LastName` VARCHAR(50),
+    `PasswordSalt` VARCHAR(100),
+    `PasswordHash` VARCHAR(100)
+);
+
+CREATE TABLE `UsersLoginReset` (
+    `ID` integer not null primary key,
+    `UserID` integer not null ,
+    `ResetKey` varchar(255) not null,
+    `UsedUp` bit,
+    `CreationDate` datetime,
+    `ValidFrom` datetime,
+    `ValidTo` datetime
+);
+
+ALTER TABLE UsersLoginReset
+ADD CONSTRAINT FK_UsersLoginReset
+FOREIGN KEY (UserID) REFERENCES Users(ID);
