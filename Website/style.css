@@ -1,0 +1,26 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.zelenb {
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px;
+    opacity: 0.85;
+}
+input:hover, .btn:hover, .zelenb:hover {
+    opacity: 1;
+    color: white;
+}
+.container {
+      padding: 16px;
+      background-color: white;
+}
+hr {
+    border: 1px solid #f1f1f1;
+     margin-bottom: 25px;
+}
+.signin {
+     background-color: white;
+     text-align: center;
+}
