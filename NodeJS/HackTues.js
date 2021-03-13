@@ -11,7 +11,7 @@ app.listen(port, '0.0.0.0', function() {
 });
 
 app.get('/register.html', (req, res) => {
-    res.sendFile('./register.html', { root: __dirname });
+    res.sendFile('./signup.html', { root: __dirname });
 });
 
 app.get('/login.html', (req, res) => {
@@ -22,9 +22,6 @@ app.get('/main.html', (req, res) => {
     res.sendFile('./main.html', { root: __dirname });
 });
 
-app.get('/page2.html', (req, res) => {
-  res.sendFile('./page2.html', { root: __dirname });
-});
 
 app.get('/about.html', (req, res) => {
   res.sendFile('./about.html', { root: __dirname });
@@ -45,7 +42,7 @@ let connection = mysql.createConnection({
   database: 'HackTues'
 })
 
-/*app.get('/',function(req,res){
+app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/register.html'));
   });
 app.post('/login.html',function(req,res){
@@ -53,7 +50,7 @@ app.post('/login.html',function(req,res){
     var email=req.body.email;
     var password=req.body.password;
     res.sendFile('/login.html',{root:__dirname});
-    var i =Number(14);  
+    var i =Number(20);  
     connection.connect(function(err) {
     if (err) throw err;
     var sql = "INSERT INTO users (ID,EmailAddress, PasswordSalt,PasswordHash) VALUES ('"+i+"', '"+email+"','"+password+"','')";
@@ -64,9 +61,9 @@ app.post('/login.html',function(req,res){
        i++;
     });
     });
-  })*/
-  app.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/register.html'));
+  })
+ /* app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/signup.html'));
   
   connection.query('select * from users where EmailAddress= "'+req.body.email+'" ',function(err,row){
     if(err){
@@ -83,4 +80,4 @@ app.post('/login.html',function(req,res){
   });
 
   connection.end();
-});
+});*/
