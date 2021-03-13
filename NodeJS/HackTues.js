@@ -1,3 +1,4 @@
+const dt = require('./mymodule');
 const express = require('express');
 const app = express();
 const port = 8080;
@@ -77,3 +78,4 @@ app.post('/login.html',function(req,res){
     });
     });
   });
+  dt.Code();
