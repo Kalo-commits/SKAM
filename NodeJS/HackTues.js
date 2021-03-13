@@ -10,7 +10,7 @@ app.listen(port, '0.0.0.0', function() {
   console.log('Listening to port:  ' + port);
 });
 
-app.get('/register.html', (req, res) => {
+app.get('/signup.html', (req, res) => {
     res.sendFile('./signup.html', { root: __dirname });
 });
 
@@ -43,7 +43,7 @@ let connection = mysql.createConnection({
 })
 
 app.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/register.html'));
+    res.sendFile(path.join(__dirname+'/signup.html'));
   });
 app.post('/login.html',function(req,res){
 
