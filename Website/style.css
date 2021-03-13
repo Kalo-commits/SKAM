@@ -12,7 +12,7 @@ input:hover, .btn:hover, .zelenb:hover {
     opacity: 1;
     color: white;
 }
-.navbar {
+.dropdown-item, .dropdown-toggle {
     font-size: 0.5cm;
 }
 .container {
