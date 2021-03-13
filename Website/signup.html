@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
     <html lang="en"> 
     <head>
           <meta charset="UTF-8">
@@ -29,7 +29,7 @@
         <title>Sprinkly</title>
     </head>
     
-    <body>
+    <body class="background img-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <div class="dropdown">
@@ -44,7 +44,7 @@
             </div>
         </nav>
     
-        <form action="/login.html" method="POST">
+        <form action="/login.html">
             <div class="container">
                 <h2>Sign up</h2>
                 <p>Please fill in this form to create an account.</p>
@@ -70,13 +70,13 @@
                     <hr>
     
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn zelenb" id="signed" onclick="mesti()" href="main.html">Register</button>
-                        
+                        <button type="submit" class="btn zelenb" id="signed" onclick="mesti()" href="main.html">Register</button>  
+                    </div>
+                    <br>
+                    <div class="d-grid gap-2">
+                        <a href="login.html" class="form-control btn btn-secondary log">Sign in</a>
                     </div>
                 </form>
-            </div>
-            <div class="signin">
-                <p>Already have an account? <a href="login.html">Sign in</a>.</p>
             </div>
         </form>
     </body>
