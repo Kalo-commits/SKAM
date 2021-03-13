@@ -1,5 +1,5 @@
 var check = function() {
-    var bt = document.getElementById('register');
+    var bt = document.getElementById('signed');
     if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
       	document.getElementById('message').style.color = '#4CAF50';
       	document.getElementById('message').innerHTML = 'Matching';
@@ -9,4 +9,7 @@ var check = function() {
       	document.getElementById('message').innerHTML = 'Not matching';
       	bt.disabled = true;
     }
+}
+function mesti() {
+	location.replace("main.html")
 }
