@@ -10,6 +10,3 @@ var check = function() {
       	bt.disabled = true;
     }
 }
-function mesti() {
-	location.replace("main.html")
-}
