@@ -63,7 +63,7 @@ app.post('/login.html',function(req,res){
 
     if (!rows.length)
     {
-        var sql = "INSERT INTO users (ID,EmailAddress, PasswordSalt,PasswordHash) VALUES ('1004', '"+email+"','"+password+"','')";
+        var sql = "INSERT INTO users (EmailAddress, PasswordSalt,PasswordHash) VALUES ('"+email+"','"+password+"','')";
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted");
