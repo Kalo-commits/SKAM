@@ -13,8 +13,11 @@ int main () {
 	 fprintf (stdout, "oops: %s\n", strerror (errno)) ;
 	 return 1 ;
   }
-  softServoSetup (0, 1, 2, 3, 4, 5, 6, 7) ; 
-  int x=0,y=0; 
+  softServoSetup (0, 1, 2, 3, 4, 5, 6, 7) ;
+ 
+  softServoWrite(7, mapRange(0,130,-160,1160, 0));
+ delay(2000);
+ /*int x=0,y=0; 
   printf("How many times to turn servo: "); 
   scanf("%d", &x); 
   for(int i=0; i<x; i++) { 
@@ -22,7 +25,10 @@ int main () {
     scanf("%d", &y);
     softServoWrite(7, mapRange(0, 130, -160, 1160, y));
     delay(100);
-}
+}*/
+  softServoWrite(7, mapRange(0, 130, -160, 1160, 90));
+  delay(2000);
+  softServoWrite(7, mapRange(0, 130, -160, 1160, 0));
  //loop for infinity and beyond
- /* for (;;) delay (100);*/
+/*  for (;;) delay (100);*/
 }	
