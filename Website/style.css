@@ -1,6 +1,5 @@
 * {
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
 }
 .zelenb {
     color: white;
@@ -37,4 +36,5 @@ hr {
 .background {
     background-image: url("bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
 }
