@@ -32,7 +32,8 @@ app.get('/password_match.js', (req, res) => {
   res.sendFile('./password_match.js', { root: __dirname });
 });
 app.use('/style.css',express.static(__dirname +'/style.css'));
-
+app.use('/icon.ico',express.static(__dirname +'/icon.ico'));
+app.use('/bg.jpg',express.static(__dirname +'/bg.jpg'));
 
 let mysql = require('mysql');
 
